@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AppConfig {
     
+//    Los errores 500 es cuando no existe el template o formatException
     @GetMapping("/index")
     private String index() {
         return "index";
