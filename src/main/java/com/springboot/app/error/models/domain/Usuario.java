@@ -1,4 +1,4 @@
-package com.springboot.app.models.domain;
+package com.springboot.app.error.models.domain;
 
 /**
  *

@@ -1,6 +1,6 @@
-package com.springboot.app.services;
+package com.springboot.app.error.services;
 
-import com.springboot.app.models.domain.Usuario;
+import com.springboot.app.error.models.domain.Usuario;
 import java.util.List;
 
 /**
