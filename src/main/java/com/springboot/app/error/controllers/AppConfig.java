@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AppConfig {
     
 //    Los errores 500 es cuando no existe el template o formatException
+    @SuppressWarnings("unused") // suprime el warning pero no hace nada mas funcional
     @GetMapping("/index")
     private String index() {
-        var numero = 1/0;
+        var numero = Integer.parseInt("10x");
         return "index";
     }
     
