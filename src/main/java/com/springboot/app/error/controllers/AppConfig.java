@@ -13,6 +13,7 @@ public class AppConfig {
 //    Los errores 500 es cuando no existe el template o formatException
     @GetMapping("/index")
     private String index() {
+        var numero = 1/0;
         return "index";
     }
     

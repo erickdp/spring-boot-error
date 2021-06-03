@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title th:ext="${error}"></title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h3 th:text="${error}"></h3>
+        
+        <div th:text="${message}"></div>
+        <div th:text="${status}"></div>
+        <div th:text="${timestamp}"></div>
+    </body>
+</html>
