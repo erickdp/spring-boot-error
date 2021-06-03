@@ -29,10 +29,9 @@ public class AppConfig {
     
     @GetMapping("ver/{id}")
     private String ver(@PathVariable Integer id, Model modelo) {
-        Usuario usuario = this.usuarioService.obtenerPorId(id);
-        if(usuario == null) {
-            throw new UsuarioNoEncontradoException(String.valueOf(id));
-        }
+        
+        var usuario = this.usuarioService.obtenerPorIdOptional(id).orElseThrow(() -> new UsuarioNoEncontradoException(id.toString()));
+        
         modelo.addAttribute("usuario", usuario);
         modelo.addAttribute("titulo", "Detalle del usuario: ".concat(usuario.getNombre()));
         return "ver";
