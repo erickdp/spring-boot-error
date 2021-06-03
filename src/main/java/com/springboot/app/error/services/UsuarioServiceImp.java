@@ -3,6 +3,7 @@ package com.springboot.app.error.services;
 import com.springboot.app.error.models.domain.Usuario;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 /**
@@ -35,6 +36,12 @@ public class UsuarioServiceImp implements UsuarioService {
             }
         }
         return null;
+    }
+
+    @Override
+    public Optional<Usuario> obtenerPorIdOptional(Integer id) {
+        var usuario = this.obtenerPorId(id); 
+        return Optional.ofNullable(usuario); // Convierte a usuario independiente de nulo o no a opcional, of no acepta nulo
     }
 
 }
